@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>프린트</title>
+<% for(var i=0;i<codes.length;i++){ %>
+<style type="text/css">
+    #editor<%=i%> { 
+		width:210mm;
+		height:auto;
+
+		font-size:14pt;
+
+    }
+</style>
+<% } %>
+</head>
+<body>
+<h3>코딩 목록</h3>
+<%= codes %>
+
+<% for(var i=0;i<codes.length;i++){ %>
+<div id="editor<%=i%>"><%= codes[i] %></div>
+<div style="height:24px"></div>
+<% } %>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<% for(var i=0;i<codes.length;i++){ %>
+<script>
+var editor<%=i%> = ace.edit("editor<%=i%>");
+    editor<%=i%>.setTheme("ace/theme/monokai");
+	editor<%=i%>.setOptions({
+		wrap:true,
+	});
+
+	editor<%=i%>.setReadOnly(true);
+	editor<%=i%>.setShowPrintMargin(true);
+
+    editor<%=i%>.session.setMode("ace/mode/javascript");
+
+	let aceH<%=i%> = editor<%=i%>.session.getScreenLength()*editor<%=i%>.renderer.lineHeight;
+	$("#editor<%=i%>").height(aceH<%=i%>);
+
+
+</script>
+<% } %>
+</body>
+</html>
