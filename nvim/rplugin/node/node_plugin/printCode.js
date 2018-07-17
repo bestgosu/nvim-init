@@ -13,5 +13,4 @@ let printCode = async (plugin)=>{
 	}
 };
 
-export default printCode;
-
+module.exports=printCode;

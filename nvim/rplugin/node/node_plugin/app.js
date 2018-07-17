@@ -1,7 +1,5 @@
 const beautify = require('cssbeautify');
-
-let printCode = require('./printCode.js');
-
+const printCode = require('./printCode.js');
 
 module.exports = plugin => {
 	plugin.setOptions({
@@ -32,7 +30,7 @@ module.exports = plugin => {
 		'PrintCode',
 		async () => {
 			try {
-				printCode();
+				printCode(plugin);
 			}
 			catch (err) {
 				console.error(err);
