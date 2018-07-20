@@ -23,3 +23,4 @@ set sts=4
 
 map <F1> :NERDTreeFind<cr>
 map <F2> :cd %:p:h<cr>:!start powershell<cr>
+map <F3> :cd %:p:h<cr>:!start explorer %:p:h<cr>
