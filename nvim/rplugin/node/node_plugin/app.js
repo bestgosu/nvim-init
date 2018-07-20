@@ -30,7 +30,7 @@ module.exports = plugin => {
 		'PrintCode',
 		async () => {
 			try {
-				printCode(plugin);
+				await plugin.nvim.funcs.execute("pwd");
 			}
 			catch (err) {
 				console.error(err);
