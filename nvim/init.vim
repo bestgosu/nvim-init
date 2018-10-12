@@ -1,4 +1,4 @@
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
