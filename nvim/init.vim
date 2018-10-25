@@ -27,3 +27,5 @@ map <F2> :cd %:p:h<cr>:!start cmd<cr>
 map <F3> :cd %:p:h<cr>:!start explorer %:p:h<cr>
 
 let g:ctrlp_cmd = "CtrlPMRUFiles"
+
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
