@@ -37,8 +37,8 @@ nmap <silent> <leader>m :cp<CR>
 
 
 map <F1> :cd %:p:h<cr>:NERDTreeFind<cr>
-map <F2> :cd %:p:h<cr>:!start cmd<cr>
-map <F3> :cd %:p:h<cr>:!start explorer %:p:h<cr>
+map <F2> :cd %:p:h<cr>:silent !start cmd<cr>
+map <F3> :cd %:p:h<cr>:silent !start explorer %:p:h<cr>
 
 let g:ctrlp_cmd = "CtrlPMRUFiles"
 
